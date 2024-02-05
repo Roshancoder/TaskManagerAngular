@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url('/assets/abstract-blur-defocused-bookshelf-library.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    background-attachment: fixed;
+    overflow: hidden;
+}

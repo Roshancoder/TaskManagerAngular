@@ -1,0 +1,19 @@
+ .container .row .col-md-4{
+    background-color: whitesmoke;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    border-radius: 4%; 
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-right: 35%;
+} 
+.image-container .image{
+    margin-left: 40%;
+    border-radius: 50%;
+}
+
+
+.container .row .col-md-4 .alert{
+    margin-bottom: 0;
+    margin-top: 0;
+}

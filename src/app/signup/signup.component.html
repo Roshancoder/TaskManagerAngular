@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="image-container">
+                <img src="\assets\img_avatar2.png" alt="Avatar" width="25%" height="25%" class="image">
+            </div>
+            <form #signup="ngForm" novalidate action="">
+                <div class="form-group">
+                    <label for="inputusername">Username</label>
+                    <input type="text" id="inputusername" name="username" class="form-control" placeholder="Username"
+                        [(ngModel)]="nameControl" required minlength="4" #uname="ngModel">
+                    <div *ngIf="uname.invalid && (uname.dirty || uname.touched)" class="alert"
+                        style="display: inline; margin-left: -4%;">
+                        <small *ngIf="uname.errors?.['required']" class="text-muted" style="color: red">
+                            Username required</small>
+                        <small *ngIf="uname.errors?.['minlength']" class="text-muted" style="color: red">
+                            Name must be at least 4 characters long.
+                        </small>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group">
+                    <label for="inputemail">Email</label>
+                    <input type="email" id="inputemail" name="email" class="form-control" placeholder="Email"
+                        #uemail="ngModel" [(ngModel)]="emailControl" required email >
+                    <div *ngIf="uemail.invalid && (uemail.dirty || uemail.touched)" class="alert"
+                        style="display: inline; margin-left: -4%;">
+                        <small *ngIf="uemail.errors?.['required']" class="text-muted" style="color: red">
+                            Email required</small>
+                        <small *ngIf="uemail.errors?.['email']" class="text-muted" style="color: red">Invalid
+                            email</small>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="inputpassword">Password</label>
+                    <input type="password" id="inputpassword" name="password" class="form-control"
+                        placeholder="Password" minlength="8" #pass="ngModel" [(ngModel)]="passControl" required>
+                    <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert"
+                        style="display: inline; margin-left: -4%;">
+                        <small *ngIf="pass.errors?.['required'] " class="text-muted" style="color: red">
+                            Password required</small>
+                        <small *ngIf="pass.errors?.['minlength'] " class="text-muted" style="color: red">
+                            Password must be at least 8 characters long.
+                        </small>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="inputpassword1">Confirm Password</label>
+                    <input type="password" id="inputpassword1" name="cpassword" class="form-control"
+                        placeholder="Confirm Password" minlength="8" #cpass="ngModel" [(ngModel)]="cpassControl" required>
+                    <div *ngIf="cpass.invalid && (cpass.dirty || cpass.touched) || cpass.value!=pass.value  " class="alert"
+                        style="display: inline; margin-left: -4%;">
+                        <small *ngIf="cpass.value != pass.value" class="text-muted" style="color: red">
+                            password not matched</small>
+                    </div>
+                </div>
+
+
+
+                <div class="d-grid ">
+                    <button class="btn btn-primary form-control" type="button">Submit</button>
+                </div>
+            </form>
+            <div class="text-center signup">
+                Already have an account ? <a routerLink="/">Login</a> here.
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.loginContainer .row .col-md-4{
+    background-color: whitesmoke;
+    border-radius: 4%;
+    margin-left: 36%;
+    margin-right: 36%;
+    margin-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.image-container .image{
+    border-radius: 50%;
+    margin-left: 40%;
+}
+.loginContainer .row .col-md-4 .alert{
+    margin-bottom: 0;
+    margin-top: 0;
+}
